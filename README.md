@@ -30,11 +30,11 @@ Manage multiple open files.
 
 ## Configuration
 
-### Create init.lua config file
+### Create `init.lua` config file
 
     mkdir nvim
-    $ cd nvim
-    $ touch init.lua
+    cd nvim
+    touch init.lua
 
 ### Basic configuration
 

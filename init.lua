@@ -28,6 +28,6 @@ require("lazy").setup({ { import = "plugins" }, }, {
 
 require("core")
 
-vim.cmd([[autocmd BufNewFile *.cpp 0r ~/kod/cp/cpp.template | $d]])
-vim.cmd([[autocmd BufNewFile *.cc 0r ~/kod/cp/cc.template | $d]])
-vim.cmd([[autocmd BufNewFile *.c 0r ~/kod/cp/c.template | $d]])
+vim.cmd([[autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/template.cpp | $d]])
+vim.cmd([[autocmd BufNewFile *.cc 0r ~/.config/nvim/templates/template.cc | $d]])
+vim.cmd([[autocmd BufNewFile *.c 0r ~/.config/nvim/templates/template.c | $d]])

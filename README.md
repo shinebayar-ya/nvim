@@ -1,29 +1,42 @@
 # Neovim tutorials
-## Introduction to Neovim:
+
+## Introduction to Neovim
+
 Welcome to Neovim editor...
+
 ## Basic navigation
+
 - Open and close files.
 - Navigation commands like moving the cursor and jumping to specific lines.
+
 ## Editing text
+
 - Editing commands like inserting text, deleting characters/lines, copying, cutting and pasting.
+
 - Modes in Neovim
-    * Insert
-    * Visual
-    * Normal
+  - Insert
+  - Visual
+  - Normal
+
 ## Searching and Replacing
+
 Search for text within a file and navigate search result
 Replace operations
+
 ## Multiple Buffers and Windows
+
 Work with multiple files using buffers and split windows.
 Manage multiple open files.
-## Configuration
-### Create init.lua config file.
 
-    $ mkdir nvim
+## Configuration
+
+### Create init.lua config file
+
+    mkdir nvim
     $ cd nvim
     $ touch init.lua
 
-### Basic configuration:
+### Basic configuration
 
     local opt = vim.opt
 
@@ -32,7 +45,7 @@ Manage multiple open files.
     opt.number = true -- shows absolute line number on cursor line (when relative number is on)
     ...
 
-### Key Mappings:
+### Key Mappings
 
     -- set leader key to space
     vim.g.mapleader = " "
@@ -44,7 +57,8 @@ Manage multiple open files.
     -- clear search highlights
     keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
-### Plugin Management:
+### Plugin Management
+
 Using lazy.nvim plugin manager
 
     local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -60,23 +74,29 @@ Using lazy.nvim plugin manager
     end
     vim.opt.rtp:prepend(lazypath)
 
-### Theme and Colorscheme:
+### Theme and Colorscheme
+
 Set Gruvbox theme.
-### Status Line and Bufferline:
+
+### Status Line and Bufferline
+
 Customize the status line and buffer line with plugins like 'lualine' and 'bufferline'.
 
-### File Explorer:
-'nvim-tree' or 'NERDTree'
+### File Explorer
 
-### LSP (Language Server Protocol):
+`nvim-tree` or `NERDTree`
 
-### Autocompletion and Snippets:
-'nvim-cmp' or 'coc.nvim'
+### LSP (Language Server Protocol)
+
+### Autocompletion and Snippets
+
+`nvim-cmp` or `coc.nvim`
 
 Customize Neovim's appearance, plugins, and mappings.
 
 ## Help for Comptetitive Programmers
-### To compile and run C++ code.
+
+### To compile and run C++ code
 
     local keymap = vim.keymap
 
@@ -86,8 +106,8 @@ Customize Neovim's appearance, plugins, and mappings.
     -- Map <F9> to compile and run C++ code with input file
     keymap.set('n', '<F9>', [[:w<CR>:!g++ -Wall -Wextra -std=c++17 -o %< % && ./%< < in <CR>]], { noremap = true})
 
-### Using template file 
+### Using template file
 
-    vim.cmd([[autocmd BufNewFile *.cpp 0r ~/kod/cp/cpp.template | $d]])
-    vim.cmd([[autocmd BufNewFile *.cc 0r ~/kod/cp/cc.template | $d]])
-    vim.cmd([[autocmd BufNewFile *.c 0r ~/kod/cp/c.template | $d]])
+    vim.cmd([[autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/template.cpp | $d]])
+    vim.cmd([[autocmd BufNewFile *.cc 0r ~/.config/nvim/templates/template.cc | $d]])
+    vim.cmd([[autocmd BufNewFile *.c 0r ~/.config/nvim/templates/template.c | $d]])

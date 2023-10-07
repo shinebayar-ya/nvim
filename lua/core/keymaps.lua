@@ -17,6 +17,7 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save it" })
+keymap.set("n", "<leader>q", ":wq<CR>", { desc = "Save it and Exit." })
 
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')

@@ -15,7 +15,7 @@ vim.g.mapleader = " "
 
 require("lazy").setup({ { import = "plugins" }, }, {
   install = {
-    colorscheme = { "nightfly" },
+    colorscheme = { "gruvbox" },
   },
   checker = {
     enabled = true,

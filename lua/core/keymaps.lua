@@ -9,15 +9,17 @@ keymap.set('n', '<F8>', [[:w<CR>:!g++ -Wall -Wextra -std=c++17 -o %< % && ./%< <
 -- Map <F9> to compile and run C++ code with input file
 keymap.set('n', '<F9>', [[:w<CR>:!g++ -Wall -Wextra -std=c++17 -o %< % && ./%< < in <CR>]], { noremap = true})
 
+-- parenthesis in insert mode
+keymap.set('i', '{', '{}<Left><CR><ESC>ko', { desc = 'double parenthesis' })
 
 -- use jk to exit insert mode
-keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+keymap.set('i', 'jk', '<ESC>', { desc = 'Exit insert mode with jk' })
 
 -- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = 'Clear search highlights' })
 
-keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save it" })
-keymap.set("n", "<leader>q", ":wq<CR>", { desc = "Save it and Exit." })
+keymap.set('n', '<leader>w', ':w<CR>', { desc = 'Save it' })
+keymap.set('n', '<leader>q', ':wq<CR>', { desc = 'Save it and Exit.' })
 
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
